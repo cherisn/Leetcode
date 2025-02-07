@@ -1,9 +1,4 @@
 class Solution:
     def maximumGap(self, nums: List[int]) -> int:
-        if len(nums) < 2:  # If less than 2 elements, return 0
-            return 0
-        
-        nums.sort()  # Sort the array
-
-        
-        return max(nums[i] - nums[i - 1] for i in range(1,len(nums)))
+        nums.sort()
+        return max(nums[i]-nums[i-1] for i in range(len(nums)))
